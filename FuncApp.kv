@@ -1,0 +1,35 @@
+#:kivy 1.11.1
+
+BoxLayout:
+    orientation: "vertical"
+    padding: 20
+    spacing: 20
+    Label:
+        text: "Informe o coeficiente 'a':"
+    TextInput:
+        id: a_input
+        multiline: False
+    Label:
+        text: "Informe o coeficiente 'b':"
+    TextInput:
+        id: b_input
+        multiline: False
+    Label:
+        text: "Informe o coeficiente 'c':"
+    TextInput:
+        id: c_input
+        multiline: False
+    Button:
+        text: "Plotar Função"
+        on_press: root.plot_func()
+    BoxLayout:
+        id: plot_layout
+        orientation: "vertical"
+        size_hint_y: None
+        height: dp(500)
+        canvas:
+            Color:
+                rgb: 1, 1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
